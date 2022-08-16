@@ -19,8 +19,25 @@ public:
     }
 };
 
-//Second Approach - Two Pointers + Sort - O(nlogn)
 
-
-//Third Approach - Hashmap - O(n)
-
+//Second Approach - Hashmap - O(n)
+class Solution {
+public:
+    vector<int> twoSum(vector<int>& nums, int target) {
+        int n = nums.size();
+        unordered_map<int,int> m;
+        vector<int> numPos;
+        
+        for(int i=0; i<n; i++){
+            if(m.find(target-nums[i])==m.end())
+                m[nums[i]] = i;
+            else{
+                numPos.push_back(i);
+                numPos.push_back(m[target-nums[i]]);
+                break;
+            }
+        }
+        
+        return numPos;
+    }
+};
