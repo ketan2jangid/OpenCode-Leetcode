@@ -1,6 +1,6 @@
 **430. Flatten a Multilevel Doubly Linked List**
 
-**LINK **- https://leetcode.com/problems/flatten-a-multilevel-doubly-linked-list/
+**LINK**- https://leetcode.com/problems/flatten-a-multilevel-doubly-linked-list/
 
 ![image](https://user-images.githubusercontent.com/92528845/185750965-d5dab83c-b8a3-43c4-9cdc-2df6b2f77821.png)
 
