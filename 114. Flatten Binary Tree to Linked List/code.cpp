@@ -29,3 +29,22 @@ public:
     }
 };
 
+//Withour using extra space - Using Recursion
+class Solution {
+public:
+    TreeNode* temp;
+    void flatten(TreeNode* root) {
+        if(!root) return;
+        makeList(root);
+    }
+    
+    void makeList(TreeNode* root){
+        if(!root)   return;
+        makeList(root->right);
+        makeList(root->left);
+        
+        root->right = temp;
+        root->left = NULL;
+        temp = root;
+    }
+};
