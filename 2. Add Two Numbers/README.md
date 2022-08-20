@@ -1,6 +1,6 @@
 **2. Add Two Numbers**
 
-_**LINK** - https://leetcode.com/problems/add-two-numbers/ _
+**LINK** - https://leetcode.com/problems/add-two-numbers/ 
 
 ![image](https://user-images.githubusercontent.com/92528845/185733266-4590199b-2334-400b-a2b7-5f19aec8c5d0.png)
 
