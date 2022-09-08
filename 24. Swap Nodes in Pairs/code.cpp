@@ -27,3 +27,22 @@ public:
         return head;
     }
 };
+
+//recursive
+class Solution {
+public:
+    ListNode* swapPairs(ListNode* head) {
+        if(!head || !head->next)    return head;
+        
+        ListNode* first = head;
+        ListNode* second = head->next;
+        
+        first->next = second->next;
+        second->next = first;
+        head = second;
+        
+        first->next = swapPairs(first->next);
+        
+        return head;
+    }
+};
