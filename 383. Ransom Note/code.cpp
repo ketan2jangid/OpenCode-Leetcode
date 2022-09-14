@@ -25,3 +25,28 @@ public:
         return true;
     }
 };
+
+//using frequency array
+//TC - O(n), SC - O(n)
+class Solution {
+public:
+    bool canConstruct(string ransomNote, string magazine) {
+        vector<int> freq(26);
+        
+        int n = ransomNote.length();
+        int len = magazine.length();
+        
+        if(len<n)   return false;
+        
+        for(auto c: magazine)
+            freq[c-'a']++;
+        for(auto c: ransomNote)
+            freq[c-'a']--;
+        
+        for(auto x: freq)
+            if(x<0)
+                return false;
+        
+        return true;
+    }
+};
