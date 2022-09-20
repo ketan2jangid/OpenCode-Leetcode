@@ -17,3 +17,23 @@ public:
         return ptr;
     }
 };
+
+//using fast and slow pointers
+class Solution {
+public:
+    ListNode* middleNode(ListNode* head) {
+        if(!head || !head->next)    return head;
+        
+        ListNode* ptr = head;
+        ListNode* fast = head;
+        
+        while(fast && fast->next){
+            fast = fast->next;
+            if(fast->next)
+                fast = fast->next;
+            ptr = ptr->next;
+        }
+        
+        return ptr;
+    }
+};
